@@ -15,12 +15,10 @@ Usage
 1. Loading Data
 You can load a dataset either from a CSV file or from the predefined sample data provided in the script.
 Load from a CSV File:
-python
 CopyEdit
 df = load_data(file_path='path_to_your_file.csv')
 Load from Sample Data:
 The script also includes sample data for testing, which can be used without the need for an external file.
-python
 CopyEdit
 sample_data = {
     'Column1': [1, 2, 2, 3, 4, 5, None],
@@ -33,7 +31,6 @@ df = load_data(sample_data=sample_data)
 The data will be cleaned by:
 * Removing duplicate rows.
 * Filling missing values with the median of the numeric columns.
-python
 CopyEdit
 df = clean_data(df)
 3. Exploring the Data
@@ -41,21 +38,17 @@ Basic data exploration will display the following information:
 * Data overview (columns, data types, non-null counts).
 * Summary statistics for numerical columns (e.g., mean, standard deviation, min, max).
 * Missing values for each column.
-python
 CopyEdit
 explore_data(df)
 4. Visualizing the Data
 You can visualize the distribution of any column using histograms and KDE plots.
-python
 CopyEdit
 visualize_data(df, 'Column1')
 5. Saving the Cleaned Data
 Finally, the cleaned dataset can be saved to a new CSV file:
-python
 CopyEdit
 save_clean_data(df, 'cleaned_data.csv')
 Example Workflow:
-python
 CopyEdit
 if __name__ == "__main__":
     # Load data (either from a file or sample data)
